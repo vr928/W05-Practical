@@ -1,6 +1,6 @@
 public class Converter_Ext2	{
 
-	// identifying variables needed for conversion 
+// identifying variables needed for conversion 
 
 	private int meters;
 	private int inches;
@@ -8,27 +8,39 @@ public class Converter_Ext2	{
 	private int yards;
 	private String print = "";
 	
-	// calling new method for conversion 
+// calling new method for conversion 
+	
 	public void setMeters (int m) {
+		
 		meters = m;
+		
 		double Total = (m * 39.37008);
+		
 		inches = (int) Math.round(Total);
 		feet = inches / 12;
 		inches = inches - (feet * 12);
 		yards = feet / 3;
 		feet = feet - (yards * 3);
+	
 		}
 		
 	public double setImperial(int yards, int feet, int inches) {
+		
 		int totalInches = (yards * 36) + (feet * 12) + (inches);
+		
 		double totalMeters = (totalInches/39.37008);
-		return totalMeters;		
+		
+				return totalMeters;		
+
 	}		
+
+		
+// defining the output	
 	
-	// defining the output	
 	public String OutputImperial()  {
 		
 		// defining the output for yards
+		
 		if(yards > 0)	{
 			if(yards == 1)	{
 				print += (yards + " yard");
@@ -40,8 +52,9 @@ public class Converter_Ext2	{
 			}else if(feet > 0 || inches > 0){
 				print +=" and ";
 			}
-			
+		
 		// defining the output for feet
+			
 		if(feet > 0) {
 			if(feet == 1)	{
 				print += (feet + " foot");
@@ -51,17 +64,23 @@ public class Converter_Ext2	{
 			if (inches > 0)		{
 				print += " and ";
 			}
+			
 		}
+		
 		// defining the output for inches 
+		
 		if(inches > 0){
 			if(inches == 1){
 				print += (inches + "inch");
 			}else{
 				print += (inches + " inches");
-				}
 			}
+		}
+		
+		
 		}	
-		return print;		
+				return print;		
+
 	}		
 
 }

@@ -9,13 +9,17 @@ public class Converter {
 
 	// calling new method for conversion 
 	public void setMeters(int m) {
+
 		meters = m;
+
 		double Total = (m * 39.37008);
+
 		inches = (int) Math.round(Total);
 		feet = inches / 12;
 		inches = inches - (feet * 12);
 		yards = feet / 3;
 		feet = feet - (yards * 3);
+
 	}
 
 	// defining the output	
@@ -44,6 +48,7 @@ public class Converter {
 				if (inches > 0) {
 					print += " and ";
 				}
+
 			}
 
 			// defining the output for inches 
@@ -54,9 +59,9 @@ public class Converter {
 					print += (inches + " inches");
 				}
 			}
+
 		}
-		
-			return print;
+		return print;
 
 	}
 
