@@ -8,7 +8,7 @@ public class W05Practical {
 	
 		int i = reader.getInt();
 		
-		if (i < 0) System.out.println("Sorry, negative numbers not allowed");
+		if (i < 0) System.out.println("Sorry, negative numbers are not allowed");
 		
 		Converter C = new Converter();
 		
