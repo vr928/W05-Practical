@@ -60,7 +60,7 @@ public class Converter	{
 		
 		if(inches > 0){
 			if(inches == 1){
-				print += (inches + "inch");
+				print += (inches + " inch");
 			}else{
 				print += (inches + " inches");
 			}
